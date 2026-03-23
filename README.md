@@ -428,20 +428,20 @@ footer a:hover {
 
 @media screen and (max-width: 600px) {
 
-    .grid-split {
+.grid-split {
         grid-template-columns: 1fr;
-    }
+}
 
-    nav.site-nav ul {
+nav.site-nav ul {
         flex-direction: column;
-    }
+}
 
-    .main-container {
+.main-container {
         padding: 12px 13px 20px 13px;
-    }
+}
 
-    h1 {
+h1 {
         font-size: 1.6em;
-    }
+}
 
 }
