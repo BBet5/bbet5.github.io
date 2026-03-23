@@ -1,197 +1,160 @@
 /*
     styles.css
-    IT 3203 Web Servers Research Site
-    one css file for all pages
+    Web Servers Research Site
 */
 
 
-/* ==========================
-   general reset stuff
-   ========================== */
-
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
+    /* coloring: main background */
+    background-color: #cce0f5;
+    color: #111111;
+    font-family: Georgia, serif;
+    font-size: 16px;
     margin: 0;
     padding: 0;
-    background-color: #ddeeff;
-    font-family: Georgia, serif;
-    color: #111111;
-    font-size: 16px;
     text-align: center;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 
-/* ==========================
-   headings
-   ========================== */
+/* title: heading styles */
 
 h1 {
     color: #ffffff;
-    font-size: 2.1em;
-    margin: 0;
-    padding: 0;
+    font-size: 2.2em;
+    margin: 0 0 5px 0;
 }
 
 h2 {
-    color: #14456e;
-    font-size: 1.45em;
-    margin-top: 26px;
-    margin-bottom: 10px;
-    padding-bottom: 6px;
     border-bottom: 2px solid #2471a3;
+    color: #0d3b5e;
+    font-size: 1.5em;
+    margin: 28px 0 12px 0;
+    padding-bottom: 7px;
 }
 
 h3 {
     color: #1a5276;
-    font-size: 1.12em;
-    margin-top: 18px;
-    margin-bottom: 7px;
+    font-size: 1.14em;
+    margin: 20px 0 8px 0;
 }
 
-h4 {
-    color: #1a5276;
-    margin-top: 14px;
-    margin-bottom: 5px;
-}
+h4 { color: #1a5276; margin: 14px 0 6px 0; }
 
-
-/* ==========================
-   paragraphs and text
-   ========================== */
 
 p {
-    line-height: 1.8;
-    margin-top: 0;
-    margin-bottom: 14px;
+    line-height: 1.85;
+    margin: 0 0 15px 0;
 }
 
-strong {
-    color: #14456e;
-}
+strong { color: #0d3b5e; }
+em { color: #333; }
 
-em {
-    color: #333333;
-}
-
-
-/* ==========================
-   lists
-   ========================== */
+a { color: #1a5276; }
+a:hover { color: #922b21; text-decoration: underline; }
 
 ul {
-    margin-bottom: 14px;
-    margin-top: 4px;
-    padding-left: 20px;
+    margin: 4px 0 15px 0;
+    padding-left: 22px;
+    text-align: left;
 }
 
 ol {
-    margin-bottom: 14px;
-    margin-top: 4px;
-    padding-left: 20px;
+    margin: 4px 0 15px 0;
+    padding-left: 22px;
+    text-align: left;
 }
 
-li {
-    line-height: 1.75;
-    margin-bottom: 6px;
-}
-
-
-/* ==========================
-   links
-   ========================== */
-
-a {
-    color: #1a5276;
-}
-
-a:hover {
-    color: #b03a2e;
-    text-decoration: underline;
-}
-
-
-/* ==========================
-   images
-   ========================== */
+li { line-height: 1.75; margin-bottom: 7px; text-align: left; }
 
 img {
     border: 2px solid #2471a3;
     border-radius: 4px;
     display: block;
-    margin-bottom: 12px;
-    margin-top: 6px;
+    margin: 8px 0 14px 0;
     max-width: 100%;
     width: 100%;
 }
 
 
-/* ==========================
-   tables
-   ========================== */
+/* rectangle: tables */
 
 table {
     border-collapse: collapse;
-    font-size: 0.93em;
-    margin-bottom: 16px;
-    margin-top: 16px;
+    font-size: 0.94em;
+    margin: 18px 0;
     width: 100%;
 }
 
 th {
+    /* coloring: table header */
     background-color: #1a5276;
-    color: #ffffff;
-    padding: 10px 14px;
+    color: #fff;
+    padding: 11px 15px;
     text-align: left;
 }
 
 td {
     border: 1px solid #aed6f1;
-    padding: 9px 13px;
-    vertical-align: top;
+    padding: 10px 14px;
     text-align: left;
+    vertical-align: top;
 }
 
-tr:nth-child(even) td {
-    background-color: #d6eaf8;
-}
-
-tr:hover td {
-    background-color: #aed6f1;
-}
+tr:nth-child(even) td { background-color: #d6eaf8; }
+tr:hover td { background-color: #aed6f1; }
 
 
-/* ==========================
-   page header banner
-   ========================== */
+/* rectangle: top banner area */
 
 .header-strip {
-    background-color: #14456e;
-    border-bottom: 4px solid #2471a3;
-    padding: 26px 0 18px 0;
+    background-color: #0d3b5e;
+    border-bottom: 5px solid #2471a3;
+    padding: 30px 0 22px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* triangle: decorative shape in banner top right */
+.header-strip::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 110px solid #2471a3;
+    border-left: 110px solid transparent;
+}
+
+/* triangle: decorative shape in banner bottom left */
+.header-strip::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 60px solid #1a5276;
+    border-right: 60px solid transparent;
 }
 
 .header-strip p {
     color: #aed6f1;
     font-size: 0.92em;
     margin: 5px 0 0 0;
-    padding: 0;
 }
 
 
-/* ==========================
-   nav bar -- uses flexbox
-   ========================== */
+/* this is the main menu: */
 
 nav.site-nav {
     background-color: #1a5276;
     padding: 0;
+    position: relative;
 }
 
 nav.site-nav ul {
@@ -199,69 +162,68 @@ nav.site-nav ul {
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
-    padding: 0 12px;
+    padding: 0 14px;
 }
 
-nav.site-nav ul li {
-    margin: 0;
-    padding: 0;
-}
+nav.site-nav ul li { margin: 0; padding: 0; }
 
 nav.site-nav ul li a {
-    color: #ffffff;
+    color: #fff;
     display: block;
     font-family: Arial, sans-serif;
-    font-size: 0.88em;
-    padding: 12px 14px;
+    font-size: 0.89em;
+    padding: 13px 15px;
     text-decoration: none;
 }
 
 nav.site-nav ul li a:hover {
     background-color: #2471a3;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
 }
 
 
-/* ==========================
-   main content wrapper
-   ========================== */
-
 .main-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 940px;
-    padding: 20px 26px 30px 26px;
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 22px 28px 34px 28px;
 }
 
 
-/* ==========================
-   white content boxes
-   ========================== */
+/* square: white content panels -- made bigger */
 
 .info-panel {
-    background-color: #ffffff;
+    background-color: #fff;
     border: 1px solid #aed6f1;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    margin-top: 0;
-    padding: 20px 24px;
+    border-radius: 6px;
+    margin-bottom: 26px;
+    padding: 30px 36px;
+    position: relative;
 }
 
-.info-panel:first-of-type {
-    margin-top: 22px;
+.info-panel:first-of-type { margin-top: 26px; }
+
+/* triangle: small accent on top left corner of each panel */
+.info-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 22px solid #2471a3;
+    border-right: 22px solid transparent;
+    border-radius: 6px 0 0 0;
 }
 
 
-/* ==========================
-   two column grid layout
-   ========================== */
+/* square: two column grid */
 
 .grid-split {
     display: grid;
-    gap: 20px;
+    gap: 22px;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     margin-top: 4px;
 }
 
@@ -271,58 +233,59 @@ nav.site-nav ul li a:hover {
 }
 
 
-/* ==========================
-   blue highlight callout box
-   ========================== */
+/* coloring: blue callout bar */
 
 .quote-block {
     background-color: #1a5276;
-    border-radius: 5px;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    padding: 15px 20px;
+    border-radius: 6px;
+    margin: 18px 0;
+    padding: 18px 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* triangle: accent inside callout */
+.quote-block::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 40px solid #0d3b5e;
+    border-left: 40px solid transparent;
 }
 
 .quote-block p {
-    color: #ffffff;
+    color: #fff;
     margin: 0;
+    position: relative;
+    z-index: 1;
 }
 
 
-/* ==========================
-   image placeholder box
-   ========================== */
+/* square: image placeholder box */
 
 .photo-box {
     background-color: #d6eaf8;
     border: 2px dashed #2471a3;
-    border-radius: 4px;
+    border-radius: 5px;
     color: #1a5276;
     font-style: italic;
-    margin-bottom: 14px;
-    margin-top: 12px;
-    padding: 30px 18px;
+    margin: 14px 0;
+    padding: 34px 20px;
     text-align: center;
 }
 
 
-/* ==========================
-   key terms shaded area
-   ========================== */
-
 .vocab-area {
     background-color: #d6eaf8;
-    border-left: 4px solid #1a5276;
-    border-radius: 0 4px 4px 0;
-    margin-bottom: 14px;
-    margin-top: 14px;
-    padding: 14px 18px;
+    border-left: 5px solid #1a5276;
+    border-radius: 0 5px 5px 0;
+    margin: 16px 0;
+    padding: 16px 20px;
 }
 
-
-/* ==========================
-   table of contents list
-   ========================== */
 
 ul.page-index {
     list-style: none;
@@ -332,118 +295,110 @@ ul.page-index {
 
 ul.page-index li {
     border-bottom: 1px solid #aed6f1;
-    margin-bottom: 0;
-    padding: 9px 2px;
+    margin: 0;
+    padding: 10px 2px;
+    text-align: center;
 }
 
-ul.page-index li a {
-    font-size: 1.02em;
-}
+ul.page-index li a { font-size: 1.03em; }
 
 
-/* ==========================
-   concept cards
-   ========================== */
+/* square: concept entry cards -- slightly bigger */
 
 .entry-card {
-    background-color: #ffffff;
+    background-color: #fff;
     border: 1px solid #aed6f1;
-    border-radius: 4px;
-    border-top: 4px solid #1a5276;
-    margin-bottom: 20px;
-    padding: 18px 22px;
+    border-radius: 5px;
+    border-top: 5px solid #1a5276;
+    margin-bottom: 26px;
+    padding: 24px 28px;
+    position: relative;
+    overflow: hidden;
 }
 
-.entry-card h3 {
-    margin-top: 6px;
+/* triangle: top right accent on concept cards */
+.entry-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 30px solid #aed6f1;
+    border-left: 30px solid transparent;
 }
 
+.entry-card h3 { margin-top: 6px; }
 
-/* ==========================
-   small label tags
-   ========================== */
 
 .label-badge {
     background-color: #1a5276;
     border-radius: 3px;
-    color: #ffffff;
+    color: #fff;
     display: inline-block;
     font-family: Arial, sans-serif;
-    font-size: 0.76em;
-    margin-bottom: 7px;
-    padding: 3px 8px;
+    font-size: 0.77em;
+    margin-bottom: 8px;
+    padding: 3px 9px;
 }
 
 
-/* ==========================
-   id selectors for specific sections
-   ========================== */
+/* I can improve here: these id sections could be refactored */
 
 #intro-text {
-    border-left: 4px solid #2471a3;
+    border-left: 5px solid #2471a3;
     color: #1a1a1a;
-    font-size: 1.05em;
-    margin: 16px 0;
-    padding-left: 14px;
+    font-size: 1.06em;
+    margin: 18px 0;
+    padding-left: 16px;
+    text-align: left;
 }
 
 #bio-block {
     background-color: #d6eaf8;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    margin-top: 22px;
-    padding: 20px 24px;
+    border-radius: 7px;
+    margin: 24px 0 22px 0;
+    padding: 24px 28px;
 }
 
-#compare-area {
-    overflow-x: auto;
-}
+#compare-area { overflow-x: auto; }
 
 
-/* ==========================
-   footer
-   ========================== */
+/* rectangle: footer bar */
 
 footer {
-    background-color: #14456e;
+    /* coloring: footer background */
+    background-color: #0d3b5e;
     color: #aed6f1;
     font-family: Arial, sans-serif;
-    font-size: 0.86em;
-    margin-top: 36px;
-    padding: 16px 20px;
+    font-size: 0.87em;
+    margin-top: 40px;
+    padding: 18px 20px;
+    position: relative;
+    overflow: hidden;
     text-align: center;
 }
 
-footer a {
-    color: #aed6f1;
-    text-decoration: underline;
+/* triangle: footer left accent */
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid #1a5276;
+    border-right: 50px solid transparent;
 }
 
-footer a:hover {
-    color: #ffffff;
-}
+footer a { color: #aed6f1; text-decoration: underline; }
+footer a:hover { color: #fff; }
 
 
-/* ==========================
-   responsive for small screens
-   ========================== */
-
-@media screen and (max-width: 600px) {
-
-    .grid-split {
-        grid-template-columns: 1fr;
-    }
-
-    nav.site-nav ul {
-        flex-direction: column;
-    }
-
-    .main-container {
-        padding: 12px 13px 20px 13px;
-    }
-
-    h1 {
-        font-size: 1.6em;
-    }
-
+@media screen and (max-width: 620px) {
+    .grid-split { grid-template-columns: 1fr; }
+    nav.site-nav ul { flex-direction: column; }
+    .main-container { padding: 12px 14px 20px 14px; }
+    h1 { font-size: 1.65em; }
+    .info-panel { padding: 20px 18px; }
 }
