@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<!--
+    static-servers.html
+    Topic page 1 -- Static Web Servers
+    IT 3203 research project
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Web Servers | Web Servers Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="header-strip">
+    <div class="main-container">
+        <h1>Static Web Servers</h1>
+    </div>
+</div>
+
+<nav class="site-nav">
+    <div class="main-container">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="static-servers.html">Static Servers</a></li>
+            <li><a href="dynamic-servers.html">Dynamic Servers</a></li>
+            <li><a href="concepts.html">Key Concepts</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="main-container">
+
+
+    <!-- section 1: what a web server is -->
+    <div class="info-panel">
+
+        <h2>First, What Is a Web Server?</h2>
+
+        <p>
+            A web server is a computer that stores files and data and delivers them
+            to other computers when requested. According to MDN Web Docs (2025), a web
+            server includes both the physical hardware that stores files and the software
+            that controls how those files are sent out. When you visit a website, your
+            browser is acting as a client, sending a request to a server, and the server
+            sends back the files your browser needs to display the page.
+        </p>
+
+        <div class="photo-box">insert image</div>
+
+        <p>
+            There are two main types of web servers: static and dynamic. This page
+            covers static servers. The next page covers dynamic ones.
+        </p>
+
+    </div>
+
+
+    <!-- section 2: defining static -->
+    <div class="info-panel">
+
+        <h2>What Makes a Server Static?</h2>
+
+        <p>
+            A static web server stores finished, pre-built files and sends those exact
+            same files to every single visitor. Nothing changes from one request to
+            the next. There is no database connected, no user login system, and no
+            content being generated on the fly. Everyone who visits sees the same thing.
+        </p>
+
+        <p>
+            According to Contentful (2023), static websites are made up of files that
+            are already complete before any visitor arrives. The server does not need
+            to process or build anything before responding. It just sends what it has.
+        </p>
+
+        <div class="quote-block">
+            <p>
+                A good way to think about it: a static web server is like a stack of
+                printed flyers sitting on a table. Everyone picks up the same flyer.
+                It never changes on its own, but it is always ready and always the same.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- section 3: when to use static -->
+    <div class="info-panel">
+
+        <h2>When a Static Server Is the Right Choice</h2>
+
+        <p>
+            Static servers are a great option in a lot of situations. Here are the
+            main reasons someone might choose one:
+        </p>
+
+        <ul>
+            <li>The content on the site does not need to update very often</li>
+            <li>Speed is more important than interactivity</li>
+            <li>The project has a limited budget and needs low-cost hosting</li>
+            <li>Security is a high priority and you want fewer attack surfaces</li>
+            <li>There is no need for user accounts or personalized content</li>
+            <li>The site is simple enough that a database would be overkill</li>
+        </ul>
+
+    </div>
+
+
+    <!-- section 4: real world examples -->
+    <div class="info-panel">
+
+        <h2>Real World Uses of Static Servers</h2>
+
+        <div class="photo-box">insert image</div>
+
+        <h3>Restaurants and Menus</h3>
+
+        <p>
+            One of the most common real-world uses for static websites is restaurant
+            menus. A menu does not change every hour. Most of the time it stays the
+            same for weeks or months. When a customer looks up a restaurant online they
+            just want to see what is on the menu and what it costs. A static site
+            handles that quickly and reliably without any extra complexity.
+        </p>
+
+        <h3>Small Business Contact Pages</h3>
+
+        <p>
+            A lot of small businesses use static sites as digital business cards.
+            They put up their phone number, address, hours, and maybe a few photos.
+            That information rarely changes, so a static site is a perfect fit.
+            It is cheap to host, fast to load, and easy to maintain.
+        </p>
+
+        <h3>Government Informational Pages</h3>
+
+        <p>
+            Certain government agencies use static sites for pages that just need
+            to display information without collecting any user data. One reason they
+            prefer static for this purpose is security. Without a database attached
+            there is much less for an attacker to try to exploit.
+        </p>
+
+    </div>
+
+
+    <!-- section 5: security advantages -->
+    <div class="info-panel">
+
+        <h2>Security: SQL Injection and Why It Does Not Work on Static Sites</h2>
+
+        <p>
+            One of the biggest security advantages of static web servers is that
+            they are not vulnerable to SQL injection attacks. To understand why,
+            it helps to know what SQL injection actually is.
+        </p>
+
+        <h3>What Is SQL Injection?</h3>
+
+        <p>
+            According to Fortinet (n.d.), a SQL injection attack happens when an
+            attacker slips malicious code into an input field on a website to try to
+            manipulate the database that is running behind it. It is one of the most
+            common types of web attacks. There are a few different versions of it:
+        </p>
+
+        <table>
+            <tr>
+                <th>Attack Type</th>
+                <th>How It Works</th>
+            </tr>
+            <tr>
+                <td>Error-Based SQLi</td>
+                <td>
+                    The attacker triggers error messages from the database on purpose.
+                    Those error messages reveal information about how the database is
+                    structured, which the attacker then uses to dig further in.
+                </td>
+            </tr>
+            <tr>
+                <td>Union-Based SQLi</td>
+                <td>
+                    The attacker adds a UNION SQL statement to an existing query so
+                    the database returns extra data it was not supposed to share.
+                </td>
+            </tr>
+            <tr>
+                <td>Blind SQLi</td>
+                <td>
+                    The attacker cannot see direct output from the database, so they
+                    send true or false questions and learn the structure of the database
+                    from how it responds.
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            Since a static web server has no database attached at all, SQL injection
+            attacks have nothing to target. That is a real and meaningful security
+            advantage when the site does not need dynamic features.
+        </p>
+
+    </div>
+
+
+    <!-- nav forward and back -->
+</div>
+
+<footer>
+    <p>
+        This is a class project for
+        <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 at KSU</a>.
+        All content is for educational purposes.
+    </p>
+</footer>
+
+</body>
+</html>
