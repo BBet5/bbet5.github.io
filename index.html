@@ -1,447 +1,195 @@
-/*
-    styles.css
-    IT 3203 Web Servers Research Site
-    one css file for all pages
-*/
-
-
-/* ==========================
-   general reset stuff
-   ========================== */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #ddeeff;
-    font-family: Georgia, serif;
-    color: #111111;
-    font-size: 16px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-/* ==========================
-   headings
-   ========================== */
-
-h1 {
-    color: #ffffff;
-    font-size: 2.1em;
-    margin: 0;
-    padding: 0;
-}
-
-h2 {
-    color: #14456e;
-    font-size: 1.45em;
-    margin-top: 26px;
-    margin-bottom: 10px;
-    padding-bottom: 6px;
-    border-bottom: 2px solid #2471a3;
-}
-
-h3 {
-    color: #1a5276;
-    font-size: 1.12em;
-    margin-top: 18px;
-    margin-bottom: 7px;
-}
-
-h4 {
-    color: #1a5276;
-    margin-top: 14px;
-    margin-bottom: 5px;
-}
-
-
-/* ==========================
-   paragraphs and text
-   ========================== */
-
-p {
-    line-height: 1.8;
-    margin-top: 0;
-    margin-bottom: 14px;
-}
-
-strong {
-    color: #14456e;
-}
-
-em {
-    color: #333333;
-}
-
-
-/* ==========================
-   lists
-   ========================== */
-
-ul {
-    margin-bottom: 14px;
-    margin-top: 4px;
-    padding-left: 20px;
-}
-
-ol {
-    margin-bottom: 14px;
-    margin-top: 4px;
-    padding-left: 20px;
-}
-
-li {
-    line-height: 1.75;
-    margin-bottom: 6px;
-}
-
-
-/* ==========================
-   links
-   ========================== */
-
-a {
-    color: #1a5276;
-}
-
-a:hover {
-    color: #b03a2e;
-    text-decoration: underline;
-}
-
-
-/* ==========================
-   images
-   ========================== */
-
-img {
-    border: 2px solid #2471a3;
-    border-radius: 4px;
-    display: block;
-    margin-bottom: 12px;
-    margin-top: 6px;
-    max-width: 100%;
-    width: 100%;
-}
-
-
-/* ==========================
-   tables
-   ========================== */
-
-table {
-    border-collapse: collapse;
-    font-size: 0.93em;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    width: 100%;
-}
-
-th {
-    background-color: #1a5276;
-    color: #ffffff;
-    padding: 10px 14px;
-    text-align: left;
-}
-
-td {
-    border: 1px solid #aed6f1;
-    padding: 9px 13px;
-    vertical-align: top;
-}
-
-tr:nth-child(even) td {
-    background-color: #d6eaf8;
-}
-
-tr:hover td {
-    background-color: #aed6f1;
-}
-
-
-/* ==========================
-   page header banner
-   ========================== */
-
-.header-strip {
-    background-color: #14456e;
-    border-bottom: 4px solid #2471a3;
-    padding: 26px 0 18px 0;
-}
-
-.header-strip p {
-    color: #aed6f1;
-    font-size: 0.92em;
-    margin: 5px 0 0 0;
-    padding: 0;
-}
-
-
-/* ==========================
-   nav bar -- uses flexbox
-   ========================== */
-
-nav.site-nav {
-    background-color: #1a5276;
-    padding: 0;
-}
-
-nav.site-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0 12px;
-}
-
-nav.site-nav ul li {
-    margin: 0;
-    padding: 0;
-}
-
-nav.site-nav ul li a {
-    color: #ffffff;
-    display: block;
-    font-family: Arial, sans-serif;
-    font-size: 0.88em;
-    padding: 12px 14px;
-    text-decoration: none;
-}
-
-nav.site-nav ul li a:hover {
-    background-color: #2471a3;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-
-/* ==========================
-   main content wrapper
-   ========================== */
-
-.main-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 940px;
-    padding: 20px 26px 30px 26px;
-}
-
-
-/* ==========================
-   white content boxes
-   ========================== */
-
-.info-panel {
-    background-color: #ffffff;
-    border: 1px solid #aed6f1;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    margin-top: 0;
-    padding: 20px 24px;
-}
-
-.info-panel:first-of-type {
-    margin-top: 22px;
-}
-
-
-/* ==========================
-   two column grid layout
-   ========================== */
-
-.grid-split {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 20px;
-    margin-top: 4px;
-}
-
-.grid-split .info-panel {
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-
-/* ==========================
-   blue highlight callout box
-   ========================== */
-
-.quote-block {
-    background-color: #1a5276;
-    border-radius: 5px;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    padding: 15px 20px;
-}
-
-.quote-block p {
-    color: #ffffff;
-    margin: 0;
-}
-
-
-/* ==========================
-   image placeholder box
-   ========================== */
-
-.photo-box {
-    background-color: #d6eaf8;
-    border: 2px dashed #2471a3;
-    border-radius: 4px;
-    color: #1a5276;
-    font-style: italic;
-    margin-bottom: 14px;
-    margin-top: 12px;
-    padding: 30px 18px;
-    text-align: center;
-}
-
-
-/* ==========================
-   key terms shaded area
-   ========================== */
-
-.vocab-area {
-    background-color: #d6eaf8;
-    border-left: 4px solid #1a5276;
-    border-radius: 0 4px 4px 0;
-    margin-bottom: 14px;
-    margin-top: 14px;
-    padding: 14px 18px;
-}
-
-
-/* ==========================
-   table of contents list
-   ========================== */
-
-ul.page-index {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-ul.page-index li {
-    border-bottom: 1px solid #aed6f1;
-    margin-bottom: 0;
-    padding: 9px 2px;
-}
-
-ul.page-index li a {
-    font-size: 1.02em;
-}
-
-
-/* ==========================
-   concept cards
-   ========================== */
-
-.entry-card {
-    background-color: #ffffff;
-    border: 1px solid #aed6f1;
-    border-radius: 4px;
-    border-top: 4px solid #1a5276;
-    margin-bottom: 20px;
-    padding: 18px 22px;
-}
-
-.entry-card h3 {
-    margin-top: 6px;
-}
-
-
-/* ==========================
-   small label tags
-   ========================== */
-
-.label-badge {
-    background-color: #1a5276;
-    border-radius: 3px;
-    color: #ffffff;
-    display: inline-block;
-    font-family: Arial, sans-serif;
-    font-size: 0.76em;
-    margin-bottom: 7px;
-    padding: 3px 8px;
-}
-
-
-/* ==========================
-   id selectors for specific sections
-   ========================== */
-
-#intro-text {
-    border-left: 4px solid #2471a3;
-    color: #1a1a1a;
-    font-size: 1.05em;
-    margin: 16px 0;
-    padding-left: 14px;
-}
-
-#bio-block {
-    background-color: #d6eaf8;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    margin-top: 22px;
-    padding: 20px 24px;
-}
-
-#compare-area {
-    overflow-x: auto;
-}
-
-
-/* ==========================
-   footer
-   ========================== */
-
-footer {
-    background-color: #14456e;
-    color: #aed6f1;
-    font-family: Arial, sans-serif;
-    font-size: 0.86em;
-    margin-top: 36px;
-    padding: 16px 20px;
-    text-align: center;
-}
-
-footer a {
-    color: #aed6f1;
-    text-decoration: underline;
-}
-
-footer a:hover {
-    color: #ffffff;
-}
-
-
-/* ==========================
-   responsive for small screens
-   ========================== */
-
-@media screen and (max-width: 600px) {
-
-.grid-split {
-        grid-template-columns: 1fr;
-}
-
-nav.site-nav ul {
-        flex-direction: column;
-}
-
-.main-container {
-        padding: 12px 13px 20px 13px;
-}
-
-h1 {
-        font-size: 1.6em;
-}
-
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    index.html
+    Homepage / cover page for the Web Servers research site
+    IT 3203 class project
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Servers Research Site - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- ======= top banner ======= -->
+<div class="header-strip">
+    <div class="main-container">
+        <h1>Web Servers: The Backbone of the Internet</h1>
+        <p>IT 3203 Research Project</p>
+    </div>
+</div>
+
+<!-- ======= navigation ======= -->
+<nav class="site-nav">
+    <div class="main-container">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="static-servers.html">Static Servers</a></li>
+            <li><a href="dynamic-servers.html">Dynamic Servers</a></li>
+            <li><a href="concepts.html">Key Concepts</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ======= page content ======= -->
+<div class="main-container">
+
+    <!-- intro and abstract -->
+    <div class="info-panel">
+
+        <h2>About This Site</h2>
+
+        <div class="photo-box">insert image</div>
+
+        <p id="intro-text">
+            This site is about web servers and how they shaped the internet as we
+            know it. From the Cold War origins of ARPANET to the massive data-driven
+            platforms of today, web servers are at the center of all of it.
+        </p>
+
+        <h3>Abstract</h3>
+
+        <p>
+            Communication has been something humans have chased for as long as
+            there have been humans. It started with spoken language passed between
+            people. Then came writing, which let information survive beyond a single
+            conversation. The printing press, invented in 9th century China and later
+            reinvented in Europe, let ideas reach thousands of people at once
+            (History.com Editors, 2018). Each step made sharing knowledge faster
+            and more accurate.
+        </p>
+
+        <p>
+            The World Wide Web is the latest and biggest step in that process.
+            And sitting behind every website on the web is something called a web
+            server. This site explores what web servers are, the two main types,
+            and why they matter so much to the modern world.
+        </p>
+
+    </div>
+
+
+    <!-- key terms table -->
+    <div class="info-panel">
+
+        <h2>Key Terms</h2>
+
+        <p>Before getting into the content, here are some terms that come up a lot:</p>
+
+        <div class="vocab-area">
+
+            <table>
+                <tr>
+                    <th>Term</th>
+                    <th>What It Means</th>
+                </tr>
+                <tr>
+                    <td>Web Server</td>
+                    <td>A computer that stores files and sends them to users who request them over the internet.</td>
+                </tr>
+                <tr>
+                    <td>ARPANET</td>
+                    <td>The government network built during the Cold War that eventually became the internet.</td>
+                </tr>
+                <tr>
+                    <td>Static Web Server</td>
+                    <td>A server that always sends the same pre-built content to every visitor.</td>
+                </tr>
+                <tr>
+                    <td>Dynamic Web Server</td>
+                    <td>A server that builds content on the fly based on each user's request.</td>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>HyperText Markup Language. The code used to build the structure of web pages.</td>
+                </tr>
+                <tr>
+                    <td>SQL Injection</td>
+                    <td>An attack method that inserts malicious code into a website's database queries.</td>
+                </tr>
+                <tr>
+                    <td>Client</td>
+                    <td>The device or browser making a request to a server.</td>
+                </tr>
+                <tr>
+                    <td>Database</td>
+                    <td>An organized system for storing and retrieving large amounts of data.</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- table of contents -->
+    <div class="info-panel">
+
+        <h2>Table of Contents</h2>
+
+        <p>This site has six pages. Click any link to go to that page:</p>
+
+        <ul class="page-index">
+            <li><a href="index.html">Home -- Introduction, abstract, and key terms (this page)</a></li>
+            <li><a href="static-servers.html">Static Web Servers -- Fixed content, speed, and security</a></li>
+            <li><a href="dynamic-servers.html">Dynamic Web Servers -- Databases, personalization, and real-world examples</a></li>
+            <li><a href="concepts.html">Key Concepts -- Five big ideas explained in depth</a></li>
+            <li><a href="references.html">References -- All sources with links</a></li>
+            <li><a href="about.html">About -- Who made this and why</a></li>
+        </ul>
+
+    </div>
+
+
+    <!-- two quick preview boxes side by side -->
+    <div class="grid-split">
+
+        <div class="info-panel">
+            <h3>The History Behind It</h3>
+            <p>
+                The internet did not start as a public tool. It started as ARPANET,
+                a defense project meant to keep military communications alive
+                during a nuclear attack. Understanding that history explains a lot
+                about how the web evolved into what it is today.
+            </p>
+            <p>
+                <a href="concepts.html">Read more on the concepts page</a>
+            </p>
+        </div>
+
+        <div class="info-panel">
+            <h3>Two Types of Servers</h3>
+            <p>
+                Not all web servers work the same way. Static servers send fixed
+                files and are fast and secure. Dynamic servers connect to databases
+                and can serve personalized content. Both have their place, and
+                knowing the difference matters.
+            </p>
+            <p>
+                <a href="static-servers.html">Start with static servers</a>
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ======= footer ======= -->
+<footer>
+    <p>
+        This is a class project for
+        <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 at KSU</a>.
+        All content is for educational purposes.
+    </p>
+</footer>
+
+</body>
+</html>
