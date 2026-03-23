@@ -169,13 +169,13 @@ tr:hover td {
    page header banner
    ========================== */
 
-.page-header {
+.header-strip {
     background-color: #14456e;
     border-bottom: 4px solid #2471a3;
     padding: 26px 0 18px 0;
 }
 
-.page-header p {
+.header-strip p {
     color: #aed6f1;
     font-size: 0.92em;
     margin: 5px 0 0 0;
@@ -187,12 +187,12 @@ tr:hover td {
    nav bar -- uses flexbox
    ========================== */
 
-nav.nav-bar {
+nav.site-nav {
     background-color: #1a5276;
     padding: 0;
 }
 
-nav.nav-bar ul {
+nav.site-nav ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
@@ -200,12 +200,12 @@ nav.nav-bar ul {
     padding: 0 12px;
 }
 
-nav.nav-bar ul li {
+nav.site-nav ul li {
     margin: 0;
     padding: 0;
 }
 
-nav.nav-bar ul li a {
+nav.site-nav ul li a {
     color: #ffffff;
     display: block;
     font-family: Arial, sans-serif;
@@ -214,7 +214,7 @@ nav.nav-bar ul li a {
     text-decoration: none;
 }
 
-nav.nav-bar ul li a:hover {
+nav.site-nav ul li a:hover {
     background-color: #2471a3;
     color: #ffffff;
     text-decoration: none;
@@ -225,7 +225,7 @@ nav.nav-bar ul li a:hover {
    main content wrapper
    ========================== */
 
-.wrapper {
+.main-container {
     margin-left: auto;
     margin-right: auto;
     max-width: 940px;
@@ -237,7 +237,7 @@ nav.nav-bar ul li a:hover {
    white content boxes
    ========================== */
 
-.content-box {
+.info-panel {
     background-color: #ffffff;
     border: 1px solid #aed6f1;
     border-radius: 5px;
@@ -246,7 +246,7 @@ nav.nav-bar ul li a:hover {
     padding: 20px 24px;
 }
 
-.content-box:first-of-type {
+.info-panel:first-of-type {
     margin-top: 22px;
 }
 
@@ -255,7 +255,7 @@ nav.nav-bar ul li a:hover {
    two column grid layout
    ========================== */
 
-.two-col {
+.grid-split {
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr;
@@ -263,7 +263,7 @@ nav.nav-bar ul li a:hover {
     margin-top: 4px;
 }
 
-.two-col .content-box {
+.grid-split .info-panel {
     margin-bottom: 0;
     margin-top: 0;
 }
@@ -273,7 +273,7 @@ nav.nav-bar ul li a:hover {
    blue highlight callout box
    ========================== */
 
-.highlight-box {
+.quote-block {
     background-color: #1a5276;
     border-radius: 5px;
     margin-bottom: 16px;
@@ -281,7 +281,7 @@ nav.nav-bar ul li a:hover {
     padding: 15px 20px;
 }
 
-.highlight-box p {
+.quote-block p {
     color: #ffffff;
     margin: 0;
 }
@@ -291,7 +291,7 @@ nav.nav-bar ul li a:hover {
    image placeholder box
    ========================== */
 
-.image-placeholder {
+.photo-box {
     background-color: #d6eaf8;
     border: 2px dashed #2471a3;
     border-radius: 4px;
@@ -308,7 +308,7 @@ nav.nav-bar ul li a:hover {
    key terms shaded area
    ========================== */
 
-.key-terms-list {
+.vocab-area {
     background-color: #d6eaf8;
     border-left: 4px solid #1a5276;
     border-radius: 0 4px 4px 0;
@@ -322,19 +322,19 @@ nav.nav-bar ul li a:hover {
    table of contents list
    ========================== */
 
-ul.toc-list {
+ul.page-index {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-ul.toc-list li {
+ul.page-index li {
     border-bottom: 1px solid #aed6f1;
     margin-bottom: 0;
     padding: 9px 2px;
 }
 
-ul.toc-list li a {
+ul.page-index li a {
     font-size: 1.02em;
 }
 
@@ -343,7 +343,7 @@ ul.toc-list li a {
    concept cards
    ========================== */
 
-.concept-card {
+.entry-card {
     background-color: #ffffff;
     border: 1px solid #aed6f1;
     border-radius: 4px;
@@ -352,7 +352,7 @@ ul.toc-list li a {
     padding: 18px 22px;
 }
 
-.concept-card h3 {
+.entry-card h3 {
     margin-top: 6px;
 }
 
@@ -361,7 +361,7 @@ ul.toc-list li a {
    small label tags
    ========================== */
 
-.tag {
+.label-badge {
     background-color: #1a5276;
     border-radius: 3px;
     color: #ffffff;
@@ -377,7 +377,7 @@ ul.toc-list li a {
    id selectors for specific sections
    ========================== */
 
-#homepage-intro {
+#intro-text {
     border-left: 4px solid #2471a3;
     color: #1a1a1a;
     font-size: 1.05em;
@@ -385,7 +385,7 @@ ul.toc-list li a {
     padding-left: 14px;
 }
 
-#about-section {
+#bio-block {
     background-color: #d6eaf8;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -393,7 +393,7 @@ ul.toc-list li a {
     padding: 20px 24px;
 }
 
-#comparison-table-section {
+#compare-area {
     overflow-x: auto;
 }
 
@@ -428,15 +428,15 @@ footer a:hover {
 
 @media screen and (max-width: 600px) {
 
-    .two-col {
+    .grid-split {
         grid-template-columns: 1fr;
     }
 
-    nav.nav-bar ul {
+    nav.site-nav ul {
         flex-direction: column;
     }
 
-    .wrapper {
+    .main-container {
         padding: 12px 13px 20px 13px;
     }
 
