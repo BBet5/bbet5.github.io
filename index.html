@@ -1,30 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--
-    index.html
-    Homepage / cover page for the Web Servers research site
-    IT 3203 class project
--->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Servers Research Site - Home</title>
+    <title>Web Servers Research Site</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- ======= top banner ======= -->
 <div class="header-strip">
     <div class="main-container">
-        <h1>Web Servers: The Backbone of the Internet</h1>
+        <h1>Web Servers Research Site</h1>
         <p>IT 3203 Research Project</p>
     </div>
 </div>
 
-<!-- ======= navigation ======= -->
+<div style="line-height:0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 30" preserveAspectRatio="none" style="display:block;width:100%;height:30px;"><polygon points="0,0 600,30 1200,0 1200,0 0,0" fill="#0a2e4a"/><polygon points="0,30 0,0 300,30" fill="#2471a3" opacity="0.4"/><polygon points="1200,30 1200,0 900,30" fill="#1a5276" opacity="0.4"/></svg></div>
+
 <nav class="site-nav">
     <div class="main-container">
         <ul>
@@ -38,142 +32,110 @@
     </div>
 </nav>
 
-<!-- ======= page content ======= -->
-<div class="main-container">
+<div class="main-container" style="padding-top: 18px; padding-left: 32px; padding-right: 24px;">
 
-    <!-- intro and abstract -->
-    <div class="info-panel">
-
-        <h2>About This Site</h2>
-
-        <div class="photo-box">insert image</div>
+    <div class="info-panel" style="margin-bottom: 30px; padding: 28px 38px 22px 38px;">
 
         <p id="intro-text">
-            This site is about web servers and how they shaped the internet as we
-            know it. From the Cold War origins of ARPANET to the massive data-driven
-            platforms of today, web servers are at the center of all of it.
+            The web is one of the most influential technologies developed in the last 100 years.
+            The human race spent millennia trying to connect. Knowledge had to be shared through
+            oral tradition which was basically a generation game of telephone. Then came writing
+            in Mesopotamia, and then printing in 9th century China.
         </p>
 
-        <h3>Abstract</h3>
+        <h2 style="border-bottom: none;">Introduction</h2>
 
         <p>
-            Communication has been something humans have chased for as long as
-            there have been humans. It started with spoken language passed between
-            people. Then came writing, which let information survive beyond a single
-            conversation. The printing press, invented in 9th century China and later
-            reinvented in Europe, let ideas reach thousands of people at once
-            (History.com Editors, 2018). Each step made sharing knowledge faster
-            and more accurate.
+            The World Wide Web allows information to be shared from any instant in time.
+            It is real-time accurate and allows all forms of data to be shared. It is an
+            interconnection of computers similar to the human brain. The name World Wide Web
+            is a descriptive name for what it actually is, the network of networks.
         </p>
 
-        <p>
-            The World Wide Web is the latest and biggest step in that process.
-            And sitting behind every website on the web is something called a web
-            server. This site explores what web servers are, the two main types,
-            and why they matter so much to the modern world.
+        <figure style="margin: 18px 0;">
+            <img src="webserver-diagram.png" alt="Diagram showing a web browser sending a request through the internet to a web server and receiving a response back">
+            <figcaption style="font-size: 0.85em; color: #555; margin-top: 6px; font-style: italic;">
+                Web browser and web server request/response cycle. Source: <a href="https://www.geeksforgeeks.org/node-js/web-server-and-its-type/" target="_blank">GeeksforGeeks</a>
+            </figcaption>
+        </figure>
+
+        <p style="margin-bottom: 4px;">
+            Web servers are the pool of information your computer accesses, similar to a library
+            (MDN Web Docs, 2025). This site looks at both types of web servers, where the
+            internet came from, and why it all matters.
         </p>
 
     </div>
 
-
-    <!-- key terms table -->
-    <div class="info-panel">
-
-        <h2>Key Terms</h2>
-
-        <p>Before getting into the content, here are some terms that come up a lot:</p>
+    <div class="info-panel" style="margin-bottom: 22px; padding: 32px 30px;">
 
         <div class="vocab-area">
-
             <table>
                 <tr>
                     <th>Term</th>
-                    <th>What It Means</th>
+                    <th>Definition</th>
                 </tr>
                 <tr>
                     <td>Web Server</td>
-                    <td>A computer that stores files and sends them to users who request them over the internet.</td>
+                    <td>A pool of information a computer accesses, like a library.</td>
                 </tr>
                 <tr>
                     <td>ARPANET</td>
-                    <td>The government network built during the Cold War that eventually became the internet.</td>
+                    <td>Advanced Research Projects Agency Network. Precursor to the web, made during the Cold War.</td>
                 </tr>
                 <tr>
-                    <td>Static Web Server</td>
-                    <td>A server that always sends the same pre-built content to every visitor.</td>
+                    <td>Static Server</td>
+                    <td>Displays the same fixed data to everyone at all times.</td>
                 </tr>
                 <tr>
-                    <td>Dynamic Web Server</td>
-                    <td>A server that builds content on the fly based on each user's request.</td>
-                </tr>
-                <tr>
-                    <td>HTML</td>
-                    <td>HyperText Markup Language. The code used to build the structure of web pages.</td>
-                </tr>
-                <tr>
-                    <td>SQL Injection</td>
-                    <td>An attack method that inserts malicious code into a website's database queries.</td>
+                    <td>Dynamic Server</td>
+                    <td>In a constant state of change, gives each user a specific output.</td>
                 </tr>
                 <tr>
                     <td>Client</td>
-                    <td>The device or browser making a request to a server.</td>
+                    <td>A computer that sends a request to a web server.</td>
                 </tr>
                 <tr>
-                    <td>Database</td>
-                    <td>An organized system for storing and retrieving large amounts of data.</td>
+                    <td>SQL Injection</td>
+                    <td>A cyberattack that uses malicious queries to find weaknesses in a database.</td>
                 </tr>
             </table>
-
         </div>
+
+        <h2 style="margin-top: 22px;">Key Terms</h2>
 
     </div>
 
-
-    <!-- table of contents -->
-    <div class="info-panel">
-
+    <div class="info-panel" style="margin-bottom: 28px; padding: 26px 36px 30px 36px;">
         <h2>Table of Contents</h2>
 
-        <p>This site has six pages. Click any link to go to that page:</p>
-
         <ul class="page-index">
-            <li><a href="index.html">Home -- Introduction, abstract, and key terms (this page)</a></li>
-            <li><a href="static-servers.html">Static Web Servers -- Fixed content, speed, and security</a></li>
-            <li><a href="dynamic-servers.html">Dynamic Web Servers -- Databases, personalization, and real-world examples</a></li>
-            <li><a href="concepts.html">Key Concepts -- Five big ideas explained in depth</a></li>
-            <li><a href="references.html">References -- All sources with links</a></li>
-            <li><a href="about.html">About -- Who made this and why</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="static-servers.html">Static Web Servers</a></li>
+            <li><a href="dynamic-servers.html">Dynamic Web Servers</a></li>
+            <li><a href="concepts.html">Key Concepts</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
 
     </div>
 
+    <div class="grid-split" style="gap: 18px;">
 
-    <!-- two quick preview boxes side by side -->
-    <div class="grid-split">
-
-        <div class="info-panel">
-            <h3>The History Behind It</h3>
+        <div class="info-panel" style="padding: 24px 28px;">
             <p>
-                The internet did not start as a public tool. It started as ARPANET,
-                a defense project meant to keep military communications alive
-                during a nuclear attack. Understanding that history explains a lot
-                about how the web evolved into what it is today.
+                The precursor to the web was ARPANET, built during the Cold War as a response
+                to the nuclear threat of Soviet weaponry and a way to keep comms alive during
+                a potential nuclear event.
             </p>
-            <p>
-                <a href="concepts.html">Read more on the concepts page</a>
-            </p>
+            <h3>Where the Web Came From</h3>
         </div>
 
-        <div class="info-panel">
-            <h3>Two Types of Servers</h3>
+        <div class="info-panel" style="padding: 24px 22px 24px 28px;">
+            <h3>What a Web Server Does</h3>
             <p>
-                Not all web servers work the same way. Static servers send fixed
-                files and are fast and secure. Dynamic servers connect to databases
-                and can serve personalized content. Both have their place, and
-                knowing the difference matters.
-            </p>
-            <p>
-                <a href="static-servers.html">Start with static servers</a>
+                Web servers are like a library where a user either grabs a book to read
+                or adds one and checks it out. That is essentially what the web does with data.
             </p>
         </div>
 
@@ -181,8 +143,6 @@
 
 </div>
 
-
-<!-- ======= footer ======= -->
 <footer>
     <p>This assignment was made by Bron in IT 3203 at KSU, for this web dev project.</p>
 </footer>
