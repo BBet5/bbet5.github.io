@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<!--
+    concepts.html
+    Key Concepts page -- five big ideas explained
+    IT 3203 research project
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Concepts | Web Servers Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="header-strip">
+    <div class="main-container">
+        <h1>Key Concepts</h1>
+    </div>
+</div>
+
+<div style="line-height:0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 30" preserveAspectRatio="none" style="display:block;width:100%;height:30px;"><polygon points="0,0 600,30 1200,0 1200,0 0,0" fill="#0d3b5e"/><polygon points="0,30 0,0 300,30" fill="#2471a3" opacity="0.4"/><polygon points="1200,30 1200,0 900,30" fill="#1a5276" opacity="0.4"/></svg></div>
+
+<nav class="site-nav">
+    <div class="main-container">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="static-servers.html">Static Servers</a></li>
+            <li><a href="dynamic-servers.html">Dynamic Servers</a></li>
+            <li><a href="concepts.html">Key Concepts</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="main-container">
+
+    <div class="info-panel">
+        <h2>Why These Concepts Matter</h2>
+        <p>
+            Web servers do not exist in a vacuum. To really understand what they do
+            and why they matter, it helps to know the bigger ideas surrounding them.
+            The five concepts below come up throughout this research and are worth
+            understanding on their own.
+        </p>
+    </div>
+
+
+    <!-- concept 1 -->
+    <div class="entry-card">
+
+        <span class="label-badge">Concept 1</span>
+        <h3>The Client-Server Model</h3>
+
+        <div class="photo-box">insert image</div>
+
+        <p>
+            The client-server model is the basic structure behind almost everything
+            on the internet. One device, the client, makes a request. Another device,
+            the server, receives it and sends something back. According to MDN Web
+            Docs (2025), when a browser requests a page it sends an HTTP request to
+            the server, and the server responds with the files needed to display it.
+        </p>
+
+        <p>
+            Your browser is almost always acting as a client. It sends requests
+            constantly as you click links, load pages, and interact with web apps.
+            On the other side, a single server can handle requests from thousands
+            of clients at the same time.
+        </p>
+
+        <h4>Key things to know:</h4>
+        <ul>
+            <li>The client always starts the conversation by sending a request</li>
+            <li>The server sits and waits until a request arrives</li>
+            <li>This is different from peer-to-peer where both sides are equal</li>
+            <li>HTTP is the protocol that defines how requests and responses are formatted</li>
+        </ul>
+
+    </div>
+
+
+    <!-- concept 2 -->
+    <div class="entry-card">
+
+        <span class="label-badge">Concept 2</span>
+        <h3>ARPANET and How the Internet Started</h3>
+
+        <p>
+            The internet did not start as something for the public. It started as a
+            military project. According to Featherly (2026), ARPANET, which stands
+            for Advanced Research Projects Agency Network, was created during the
+            Cold War so the U.S. military could maintain communications even if parts
+            of the network were destroyed in a nuclear attack.
+        </p>
+
+        <div class="photo-box">insert image</div>
+
+        <p>
+            Before ARPANET, if you wanted to share data between two computers you
+            had to physically carry a tape from one machine to the other or wire
+            them together directly. ARPANET introduced packet switching, the idea
+            of breaking data into small pieces and routing them independently across
+            a network. That idea is still the foundation of how the internet works.
+        </p>
+
+        <h4>Some early milestones:</h4>
+
+        <table>
+            <tr>
+                <th>Year</th>
+                <th>Event</th>
+            </tr>
+            <tr>
+                <td>1969</td>
+                <td>ARPANET launches with four connected computers at U.S. universities</td>
+            </tr>
+            <tr>
+                <td>1971</td>
+                <td>The first email is sent over ARPANET</td>
+            </tr>
+            <tr>
+                <td>1983</td>
+                <td>TCP/IP is adopted as the standard communication protocol</td>
+            </tr>
+            <tr>
+                <td>1991</td>
+                <td>Tim Berners-Lee launches the World Wide Web</td>
+            </tr>
+            <tr>
+                <td>1993</td>
+                <td>The Mosaic browser makes the web accessible to everyday users</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+    <!-- concept 3 -->
+    <div class="entry-card">
+
+        <span class="label-badge">Concept 3</span>
+        <h3>HTML and What Servers Actually Send</h3>
+
+        <p>
+            When a web server responds to a request the main thing it sends back is
+            an HTML file. HTML stands for HyperText Markup Language. It is the code
+            that tells a browser how to structure and display a web page. Every heading,
+            paragraph, image, and link you see on a website exists because of HTML tags.
+        </p>
+
+        <p>
+            Along with HTML, a server will usually also send a CSS file, which controls
+            how everything looks, and sometimes JavaScript files, which add interactive
+            behavior. These three together are the backbone of almost every website
+            ever made.
+        </p>
+
+        <table>
+            <tr>
+                <th>Language</th>
+                <th>What It Does</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>Structure and content</td>
+                <td>Headings, paragraphs, images, links</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>Visual styling</td>
+                <td>Colors, fonts, layout, spacing</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>Interactive behavior</td>
+                <td>Buttons, animations, form validation</td>
+            </tr>
+        </table>
+
+        <p>
+            For static servers, these files are stored as-is and just handed over.
+            For dynamic servers, the HTML is often built piece by piece before being
+            sent, pulling data from a database to fill it in.
+        </p>
+
+    </div>
+
+
+    <!-- concept 4 -->
+    <div class="entry-card">
+
+        <span class="label-badge">Concept 4</span>
+        <h3>Databases and How Dynamic Servers Use Them</h3>
+
+        <p>
+            A database is an organized system for storing, managing, and pulling up
+            large amounts of data. According to Microsoft Azure (n.d.), databases allow
+            data to be structured so it can be stored efficiently and retrieved quickly
+            when needed.
+        </p>
+
+        <div class="photo-box">insert image</div>
+
+        <p>
+            Dynamic web servers depend on databases to do their job. Every user account,
+            every product listing, every social media post, and every comment on a
+            dynamic platform lives in a database somewhere. When a user requests a page,
+            the server sends a query to the database asking for specific data. The
+            database sends it back. The server formats it into HTML and sends it to
+            the browser. All of that happens in fractions of a second.
+        </p>
+
+        <p>
+            This is also where a lot of the security risk for dynamic servers comes
+            from. Because the server is talking to a database, attackers have something
+            to target, specifically through SQL injection attacks covered on the
+            static servers page.
+        </p>
+
+    </div>
+
+
+    <!-- concept 5 -->
+    <div class="entry-card">
+
+        <span class="label-badge">Concept 5</span>
+        <h3>Data Collection and the Modern Web Economy</h3>
+
+        <p>
+            One of the biggest side effects of dynamic web servers becoming the norm
+            is that they enable massive data collection. Every action a user takes
+            on a dynamic platform can potentially be logged and stored. Klosowski (2020)
+            found that large tech companies collect surprisingly detailed profiles of
+            their users based on browsing behavior, purchase history, location, and more.
+        </p>
+
+        <p>
+            That data has become one of the most valuable things in the tech economy.
+            Advertising companies pay enormous amounts to access it because it lets
+            them target specific audiences with specific messages. Platforms like
+            Google, Instagram, and TikTok have built their entire business models
+            around collecting this data and using it to sell ads.
+        </p>
+
+        <div class="photo-box">insert image</div>
+
+        <p>
+            It is not just private companies either. Franks and Cru Cain (2022) from
+            the GAO reported that the federal government also collects large amounts
+            of personal data and that there are real questions about how well it is
+            being protected. As dynamic servers and databases continue to grow in
+            scale, the data they hold becomes more sensitive and more valuable at the
+            same time.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
