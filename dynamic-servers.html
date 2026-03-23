@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-
-<!--
-    dynamic-servers.html
-    Topic page 2 -- Dynamic Web Servers
-    IT 3203 research project
--->
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +15,7 @@
     </div>
 </div>
 
-<div style="line-height:0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 30" preserveAspectRatio="none" style="display:block;width:100%;height:30px;"><polygon points="0,0 600,30 1200,0 1200,0 0,0" fill="#0d3b5e"/><polygon points="0,30 0,0 300,30" fill="#2471a3" opacity="0.4"/><polygon points="1200,30 1200,0 900,30" fill="#1a5276" opacity="0.4"/></svg></div>
+<div style="line-height:0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 30" preserveAspectRatio="none" style="display:block;width:100%;height:30px;"><polygon points="0,0 600,30 1200,0 1200,0 0,0" fill="#0a2e4a"/><polygon points="0,30 0,0 300,30" fill="#2471a3" opacity="0.4"/><polygon points="1200,30 1200,0 900,30" fill="#1a5276" opacity="0.4"/></svg></div>
 
 <nav class="site-nav">
     <div class="main-container">
@@ -37,205 +30,112 @@
     </div>
 </nav>
 
-<div class="main-container">
+<div class="main-container" style="padding-top: 22px; padding-left: 30px; padding-right: 22px;">
 
+    <div class="info-panel" style="margin-bottom: 24px; padding: 26px 34px 30px 34px;">
 
-    <!-- what is a dynamic server -->
-    <div class="info-panel">
+        <h2>Dynamic Web Servers</h2>
 
-        <h2>What Is a Dynamic Web Server?</h2>
-
-        <p>
-            A dynamic web server does not send pre-made files the way a static server
-            does. Instead it builds a response on the spot every time someone makes
-            a request. It pulls information from a database, puts it together, and
-            sends back a page that was assembled specifically for that user at that
-            moment.
-        </p>
+        <div class="photo-box" style="margin: 14px 0 18px 0;">insert image</div>
 
         <p>
-            According to Senevirathna (2025), dynamic servers process requests at
-            runtime. That means the content a visitor sees is generated in real time
-            based on what they asked for or who they are. Two different users visiting
-            the same URL can get completely different results.
+            The dynamic part of dynamic web servers is that they are in a state of constant
+            change. When a user accesses the content, they get a specific output (Senevirathna, 2025).
+            The user can also add data to the site. Dynamic web servers are the bread and butter of
+            databases. If you need a site that goes through constant change, you need a
+            dynamic web server.
         </p>
-
-        <div class="photo-box">insert image</div>
 
     </div>
 
-
-    <!-- comparison table -->
-    <div class="info-panel">
-
-        <h2>Comparing Static and Dynamic Servers</h2>
-
-        <p>Here is a side by side look at how the two types differ:</p>
+    <div class="info-panel" style="margin-bottom: 16px; padding: 32px 28px 28px 32px;">
 
         <div id="compare-area">
             <table>
                 <tr>
                     <th>Feature</th>
-                    <th>Static Server</th>
-                    <th>Dynamic Server</th>
+                    <th>Static</th>
+                    <th>Dynamic</th>
                 </tr>
                 <tr>
-                    <td>Content changes per visitor?</td>
-                    <td>No, same for everyone</td>
-                    <td>Yes, customized each time</td>
-                </tr>
-                <tr>
-                    <td>Uses a database?</td>
-                    <td>No</td>
-                    <td>Yes</td>
-                </tr>
-                <tr>
-                    <td>Supports user logins?</td>
-                    <td>No</td>
-                    <td>Yes</td>
-                </tr>
-                <tr>
-                    <td>Load speed</td>
-                    <td>Faster</td>
-                    <td>Slower but more powerful</td>
-                </tr>
-                <tr>
-                    <td>Security risk</td>
-                    <td>Lower</td>
-                    <td>Higher due to database exposure</td>
+                    <td>Content</td>
+                    <td>Same for everyone</td>
+                    <td>Specific per user</td>
                 </tr>
                 <tr>
                     <td>Complexity</td>
-                    <td>Simple</td>
-                    <td>More complex to build and maintain</td>
+                    <td>Less complex</td>
+                    <td>More advanced</td>
                 </tr>
                 <tr>
-                    <td>Best suited for</td>
-                    <td>Menus, contact pages, display sites</td>
-                    <td>Stores, social media, web apps</td>
+                    <td>Speed</td>
+                    <td>Faster</td>
+                    <td>Slower</td>
+                </tr>
+                <tr>
+                    <td>Security</td>
+                    <td>More secure</td>
+                    <td>Higher risk</td>
+                </tr>
+                <tr>
+                    <td>User input</td>
+                    <td>Read only</td>
+                    <td>Users can add data</td>
                 </tr>
             </table>
         </div>
 
+        <h2 style="margin-top: 20px;">Comparison</h2>
+
     </div>
 
-
-    <!-- when you need dynamic -->
-    <div class="info-panel">
-
-        <h2>When You Need a Dynamic Server</h2>
+    <div class="info-panel" style="padding: 30px 38px 24px 30px; margin-bottom: 28px;">
 
         <p>
-            There are plenty of situations where a static server just cannot do the job.
-            A dynamic server becomes necessary when a site needs to:
+            Amazon.com is a great example where you can post products, advertise, and add
+            items to a cart. Instagram is another, letting users create profiles and
+            receive millions of uploads daily.
         </p>
 
-        <ul>
-            <li>Let visitors create accounts and sign in</li>
-            <li>Show personalized content based on who is logged in</li>
-            <li>Let users upload photos, videos, or other content</li>
-            <li>Run a store where products can be browsed, added to a cart, and purchased</li>
-            <li>Store information in a database and pull it back out when needed</li>
-            <li>Show a live feed of content that updates constantly</li>
-            <li>Track user behavior and collect usage data</li>
-        </ul>
-
-    </div>
-
-
-    <!-- real world examples -->
-    <div class="info-panel">
-
-        <h2>Real World Examples</h2>
-
-        <h3>Amazon</h3>
+        <h2>Examples</h2>
 
         <div class="photo-box">insert image</div>
 
-        <p>
-            Amazon is one of the clearest examples of dynamic web servers at scale.
-            Every product listing on the site is stored in a database. When a user
-            searches for something, the server runs a query, finds matching results,
-            and builds a custom page with those results. When a user adds something
-            to their cart, the server writes that change to the database. The
-            personalized recommendations on the homepage are generated based on
-            browsing and purchase history. None of that is possible with a static server.
-        </p>
-
-        <h3>Instagram</h3>
-
-        <p>
-            Instagram handles millions of uploads every single day. Every post, every
-            comment, every like, every follow, and every story is stored in a database
-            somewhere. When a user opens their feed, the server pulls posts from accounts
-            they follow, runs them through an algorithm, and builds a personalized feed
-            just for that user. That whole process happens dynamically every time the
-            app is opened.
-        </p>
-
-        <h3>Data Collection on Dynamic Platforms</h3>
-
-        <p>
-            According to Klosowski (2020), large tech companies collect huge amounts
-            of data about how users interact with their platforms. Every click, scroll,
-            search, and pause can be tracked and stored. Dynamic servers with databases
-            behind them make this kind of large-scale data collection possible. That
-            data gets used for targeted advertising, product recommendations, and
-            sometimes sold to third parties.
+        <p style="margin-bottom: 6px;">
+            Dynamic servers also allow collection of massive amounts of data. That data
+            can be filtered and used to track, monitor, and sell to users across other
+            dynamic web servers.
         </p>
 
     </div>
 
+    <div class="info-panel" style="margin-bottom: 20px; padding: 28px 32px 32px 36px;">
 
-    <!-- future section -->
-    <div class="info-panel">
-
-        <h2>The Future of Dynamic Servers</h2>
-
-        <p>
-            The direction the web is moving is clearly toward more data-driven, dynamic
-            experiences. A few developments that show where things are headed:
-        </p>
-
-        <ul>
-            <li>
-                <strong>Palantir and Government Surveillance:</strong> Bajwa (2026)
-                reported that Palantir's CEO recently defended their surveillance
-                technology as U.S. government contracts boosted the company's sales.
-                Palantir builds data analysis tools used by agencies like the Department
-                of Defense and Homeland Security. That kind of large-scale data work
-                depends entirely on dynamic server infrastructure and powerful databases.
-            </li>
-            <li>
-                <strong>Federal Data Collection:</strong> Franks and Cru Cain (2022)
-                from the U.S. Government Accountability Office found that the federal
-                government collects enormous amounts of personal data about citizens
-                and raised concerns about how well that data is being protected.
-            </li>
-            <li>
-                <strong>Algorithm-Driven Feeds:</strong> Social media platforms combine
-                dynamic servers with machine learning algorithms to build feeds designed
-                to maximize how long users stay on the app. The more users interact,
-                the more data gets generated, and the more refined the algorithm becomes.
-                It is a self-reinforcing loop that depends completely on dynamic web
-                server technology.
-            </li>
-        </ul>
-
-        <div class="quote-block">
+        <div class="quote-block" style="margin-bottom: 18px;">
             <p>
-                Data collection and database-driven applications are only growing.
-                Dynamic web servers are at the center of that growth, and understanding
-                them is increasingly important for anyone working in tech.
+                Other companies such as Palantir will likely experience a spike in government
+                funding, and the data will likely be used for the Department of Defense and
+                Homeland Security (Bajwa, 2026; Franks &amp; Cru Cain, 2022).
             </p>
         </div>
 
+        <h2>The Future</h2>
+
+        <p>
+            Social media uses dynamic servers along with algorithms to curate addictive feeds
+            that create data that can be sold. An online social presence is becoming more
+            integral in countries with internet access.
+        </p>
+
+        <p style="margin-bottom: 4px;">
+            Data collection is an increasingly lucrative market. Companies like TikTok were
+            recently acquired by Oracle, a database management company, most likely for
+            marketing and analytics (Klosowski, 2020).
+        </p>
+
     </div>
 
-
-    <!-- page navigation -->
 </div>
-
 
 </body>
 </html>
