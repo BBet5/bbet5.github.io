@@ -1,166 +1,447 @@
-<!DOCTYPE html>
-<html lang="en">
+/*
+    styles.css
+    IT 3203 Web Servers Research Site
+    one css file for all pages
+*/
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Servers Research Site</title>
-    <!-- linking my one css file -->
-    <link rel="stylesheet" href="styles.css">
-</head>
 
-<body>
+/* ==========================
+   general reset stuff
+   ========================== */
 
-    <!-- page header at the top of every page -->
-    <div class="page-header">
-        <div class="wrapper">
-            <h1>Web Servers: The Backbone of the Internet</h1>
-            <p>A Research Website - IT 3203 Class Project</p>
-        </div>
-    </div>
+* {
+    box-sizing: border-box;
+}
 
-    <!-- main navigation menu - same on every page -->
-    <nav class="nav-bar">
-        <div class="wrapper">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="static-servers.html">Static Servers</a></li>
-                <li><a href="dynamic-servers.html">Dynamic Servers</a></li>
-                <li><a href="concepts.html">Key Concepts</a></li>
-                <li><a href="references.html">References</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
-    </nav>
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ddeeff;
+    font-family: Georgia, serif;
+    color: #111111;
+    font-size: 16px;
+}
 
-    <!-- main content area -->
-    <div class="wrapper">
+html {
+    scroll-behavior: smooth;
+}
 
-        <!-- cover / intro section -->
-        <div class="content-box" style="margin-top: 28px;">
 
-            <h2>Welcome to My Research Site</h2>
+/* ==========================
+   headings
+   ========================== */
 
-            <p id="homepage-intro">
-                The World Wide Web is one of the most powerful technologies ever created. This site explores 
-                how web servers work, the history of the internet, and the difference between static and 
-                dynamic servers. Through this research I hope to show how the web grew from a Cold War 
-                government project into something that touches almost every part of modern life.
-            </p>
+h1 {
+    color: #ffffff;
+    font-size: 2.1em;
+    margin: 0;
+    padding: 0;
+}
 
-            <!-- image of the world wide web concept or internet connections -->
-            <div class="image-placeholder">
-                (insert image) A graphic showing a globe with network connection lines spreading across it, 
-                representing the World Wide Web connecting computers worldwide.
-            </div>
+h2 {
+    color: #14456e;
+    font-size: 1.45em;
+    margin-top: 26px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #2471a3;
+}
 
-            <h3>Abstract</h3>
-            <p>
-                The web did not appear out of nowhere. It grew out of thousands of years of humans trying to 
-                share information faster and more accurately. From oral traditions to writing, from the printing 
-                press to telegraph wires, every generation pushed communication further. The World Wide Web 
-                is the latest and arguably most impactful step in that process. At the center of the web are 
-                web servers, the machines that store and deliver information on demand. This site breaks down 
-                how those servers work, compares the two main types, and looks at where this technology is 
-                headed in the future.
-            </p>
+h3 {
+    color: #1a5276;
+    font-size: 1.12em;
+    margin-top: 18px;
+    margin-bottom: 7px;
+}
 
-        </div>
+h4 {
+    color: #1a5276;
+    margin-top: 14px;
+    margin-bottom: 5px;
+}
 
-        <!-- key terms section -->
-        <div class="content-box">
 
-            <h2>Key Terms</h2>
-            <p>Below are some important words and phrases you will see throughout this site.</p>
+/* ==========================
+   paragraphs and text
+   ========================== */
 
-            <div class="key-terms-list">
-                <table>
-                    <tr>
-                        <th>Term</th>
-                        <th>Definition</th>
-                    </tr>
-                    <tr>
-                        <td>Web Server</td>
-                        <td>A computer that stores data and delivers it to clients over the internet when requested.</td>
-                    </tr>
-                    <tr>
-                        <td>ARPANET</td>
-                        <td>Advanced Research Projects Agency Network, the precursor to the modern internet, created during the Cold War.</td>
-                    </tr>
-                    <tr>
-                        <td>Static Web Server</td>
-                        <td>A server that delivers the same fixed content to every user every time.</td>
-                    </tr>
-                    <tr>
-                        <td>Dynamic Web Server</td>
-                        <td>A server that generates custom content depending on who is requesting it and when.</td>
-                    </tr>
-                    <tr>
-                        <td>HTML</td>
-                        <td>HyperText Markup Language, the standard language used to structure content on the web.</td>
-                    </tr>
-                    <tr>
-                        <td>SQL Injection</td>
-                        <td>A type of cyberattack where malicious code is inserted into a database query.</td>
-                    </tr>
-                    <tr>
-                        <td>Client</td>
-                        <td>A computer or device that requests information from a web server.</td>
-                    </tr>
-                </table>
-            </div>
+p {
+    line-height: 1.8;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
 
-        </div>
+strong {
+    color: #14456e;
+}
 
-        <!-- table of contents section -->
-        <div class="content-box">
+em {
+    color: #333333;
+}
 
-            <h2>Table of Contents</h2>
-            <p>Use the links below to navigate to each section of the site:</p>
 
-            <ul class="toc-list">
-                <li><a href="index.html">1. Homepage - Introduction and Key Terms (you are here)</a></li>
-                <li><a href="static-servers.html">2. Static Web Servers - What they are and when to use them</a></li>
-                <li><a href="dynamic-servers.html">3. Dynamic Web Servers - How they work and real world examples</a></li>
-                <li><a href="concepts.html">4. Key Concepts - Five important ideas explained in depth</a></li>
-                <li><a href="references.html">5. References and Resources - Sources and helpful links</a></li>
-                <li><a href="about.html">6. About - Who made this site</a></li>
-            </ul>
+/* ==========================
+   lists
+   ========================== */
 
-        </div>
+ul {
+    margin-bottom: 14px;
+    margin-top: 4px;
+    padding-left: 20px;
+}
 
-        <!-- quick overview grid -->
-        <div class="two-col">
-            <div class="content-box">
-                <h3>A Brief History</h3>
-                <p>
-                    Humans have been trying to communicate and share knowledge for thousands of years. 
-                    From spoken word to writing systems invented in Mesopotamia, to the printing press 
-                    in 9th century China, each step brought us closer to instant and accurate communication. 
-                    The internet is just the newest chapter.
-                </p>
-            </div>
-            <div class="content-box">
-                <h3>Why Web Servers Matter</h3>
-                <p>
-                    Without web servers, there is no internet experience as we know it. 
-                    They act like a massive library, storing every website, app, and piece of data 
-                    you have ever accessed online. Understanding them is key to understanding 
-                    how the modern digital world functions.
-                </p>
-            </div>
-        </div>
+ol {
+    margin-bottom: 14px;
+    margin-top: 4px;
+    padding-left: 20px;
+}
 
-    </div>
+li {
+    line-height: 1.75;
+    margin-bottom: 6px;
+}
 
-    <!-- footer same on every page -->
-    <footer>
-        <p>
-            This is a class project for 
-            <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 at KSU</a>. 
-            All content is for educational purposes.
-        </p>
-    </footer>
 
-</body>
-</html>
+/* ==========================
+   links
+   ========================== */
+
+a {
+    color: #1a5276;
+}
+
+a:hover {
+    color: #b03a2e;
+    text-decoration: underline;
+}
+
+
+/* ==========================
+   images
+   ========================== */
+
+img {
+    border: 2px solid #2471a3;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 12px;
+    margin-top: 6px;
+    max-width: 100%;
+    width: 100%;
+}
+
+
+/* ==========================
+   tables
+   ========================== */
+
+table {
+    border-collapse: collapse;
+    font-size: 0.93em;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    width: 100%;
+}
+
+th {
+    background-color: #1a5276;
+    color: #ffffff;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+td {
+    border: 1px solid #aed6f1;
+    padding: 9px 13px;
+    vertical-align: top;
+}
+
+tr:nth-child(even) td {
+    background-color: #d6eaf8;
+}
+
+tr:hover td {
+    background-color: #aed6f1;
+}
+
+
+/* ==========================
+   page header banner
+   ========================== */
+
+.page-header {
+    background-color: #14456e;
+    border-bottom: 4px solid #2471a3;
+    padding: 26px 0 18px 0;
+}
+
+.page-header p {
+    color: #aed6f1;
+    font-size: 0.92em;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+
+/* ==========================
+   nav bar -- uses flexbox
+   ========================== */
+
+nav.nav-bar {
+    background-color: #1a5276;
+    padding: 0;
+}
+
+nav.nav-bar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0 12px;
+}
+
+nav.nav-bar ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav.nav-bar ul li a {
+    color: #ffffff;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 0.88em;
+    padding: 12px 14px;
+    text-decoration: none;
+}
+
+nav.nav-bar ul li a:hover {
+    background-color: #2471a3;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+/* ==========================
+   main content wrapper
+   ========================== */
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 940px;
+    padding: 20px 26px 30px 26px;
+}
+
+
+/* ==========================
+   white content boxes
+   ========================== */
+
+.content-box {
+    background-color: #ffffff;
+    border: 1px solid #aed6f1;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding: 20px 24px;
+}
+
+.content-box:first-of-type {
+    margin-top: 22px;
+}
+
+
+/* ==========================
+   two column grid layout
+   ========================== */
+
+.two-col {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+    margin-top: 4px;
+}
+
+.two-col .content-box {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+/* ==========================
+   blue highlight callout box
+   ========================== */
+
+.highlight-box {
+    background-color: #1a5276;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    padding: 15px 20px;
+}
+
+.highlight-box p {
+    color: #ffffff;
+    margin: 0;
+}
+
+
+/* ==========================
+   image placeholder box
+   ========================== */
+
+.image-placeholder {
+    background-color: #d6eaf8;
+    border: 2px dashed #2471a3;
+    border-radius: 4px;
+    color: #1a5276;
+    font-style: italic;
+    margin-bottom: 14px;
+    margin-top: 12px;
+    padding: 30px 18px;
+    text-align: center;
+}
+
+
+/* ==========================
+   key terms shaded area
+   ========================== */
+
+.key-terms-list {
+    background-color: #d6eaf8;
+    border-left: 4px solid #1a5276;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 14px;
+    margin-top: 14px;
+    padding: 14px 18px;
+}
+
+
+/* ==========================
+   table of contents list
+   ========================== */
+
+ul.toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.toc-list li {
+    border-bottom: 1px solid #aed6f1;
+    margin-bottom: 0;
+    padding: 9px 2px;
+}
+
+ul.toc-list li a {
+    font-size: 1.02em;
+}
+
+
+/* ==========================
+   concept cards
+   ========================== */
+
+.concept-card {
+    background-color: #ffffff;
+    border: 1px solid #aed6f1;
+    border-radius: 4px;
+    border-top: 4px solid #1a5276;
+    margin-bottom: 20px;
+    padding: 18px 22px;
+}
+
+.concept-card h3 {
+    margin-top: 6px;
+}
+
+
+/* ==========================
+   small label tags
+   ========================== */
+
+.tag {
+    background-color: #1a5276;
+    border-radius: 3px;
+    color: #ffffff;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 0.76em;
+    margin-bottom: 7px;
+    padding: 3px 8px;
+}
+
+
+/* ==========================
+   id selectors for specific sections
+   ========================== */
+
+#homepage-intro {
+    border-left: 4px solid #2471a3;
+    color: #1a1a1a;
+    font-size: 1.05em;
+    margin: 16px 0;
+    padding-left: 14px;
+}
+
+#about-section {
+    background-color: #d6eaf8;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    margin-top: 22px;
+    padding: 20px 24px;
+}
+
+#comparison-table-section {
+    overflow-x: auto;
+}
+
+
+/* ==========================
+   footer
+   ========================== */
+
+footer {
+    background-color: #14456e;
+    color: #aed6f1;
+    font-family: Arial, sans-serif;
+    font-size: 0.86em;
+    margin-top: 36px;
+    padding: 16px 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #aed6f1;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+
+/* ==========================
+   responsive for small screens
+   ========================== */
+
+@media screen and (max-width: 600px) {
+
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+
+    nav.nav-bar ul {
+        flex-direction: column;
+    }
+
+    .wrapper {
+        padding: 12px 13px 20px 13px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+}
