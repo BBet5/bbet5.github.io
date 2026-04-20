@@ -212,48 +212,53 @@
 
     <form id="quizForm">
 
-        <!-- testing knowledge of web history -->
-        <div class="q-block">
-            <span class="q-num">Question 1 &mdash; Multiple Choice</span>
-            <p class="q-text">What year was the World Wide Web launched to the public?</p>
-            <label><input type="radio" name="q1" value="a"> 1983</label>
-            <label><input type="radio" name="q1" value="b"> 1991</label>
-            <label><input type="radio" name="q1" value="c"> 1999</label>
-            <label><input type="radio" name="q1" value="d"> 1969</label>
+        <!-- 2x2 grid for questions 1 through 4 -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px;">
+
+            <!-- testing knowledge of web history -->
+            <div class="q-block" style="margin-bottom: 0;">
+                <span class="q-num">Question 1 &mdash; Multiple Choice</span>
+                <p class="q-text">What year was the World Wide Web launched to the public?</p>
+                <label><input type="radio" name="q1" value="a"> 1983</label>
+                <label><input type="radio" name="q1" value="b"> 1991</label>
+                <label><input type="radio" name="q1" value="c"> 1999</label>
+                <label><input type="radio" name="q1" value="d"> 1969</label>
+            </div>
+
+            <!-- testing knowledge of when to use a static server -->
+            <div class="q-block" style="margin-bottom: 0;">
+                <span class="q-num">Question 2 &mdash; Select All That Apply</span>
+                <p class="q-text">Why would you use a static web server? Select all that apply.</p>
+                <label><input type="checkbox" name="q2" value="a"> Speed</label>
+                <label><input type="checkbox" name="q2" value="b"> Requires a login system</label>
+                <label><input type="checkbox" name="q2" value="c"> Security</label>
+                <label><input type="checkbox" name="q2" value="d"> Simplicity</label>
+                <label><input type="checkbox" name="q2" value="e"> Constantly changing database</label>
+            </div>
+
+            <!-- this question is testing if you can tell the difference between attacks -->
+            <div class="q-block" style="margin-bottom: 0;">
+                <span class="q-num">Question 3 &mdash; Multiple Choice</span>
+                <p class="q-text">Which SQL injection attack works by using process of elimination and looking for error messages to map out a database?</p>
+                <label><input type="radio" name="q3" value="a"> Union-Based SQLi</label>
+                <label><input type="radio" name="q3" value="b"> Error-Based SQLi</label>
+                <label><input type="radio" name="q3" value="c"> Brute Force Attack</label>
+                <label><input type="radio" name="q3" value="d"> Phishing</label>
+            </div>
+
+            <!-- testing knowledge of dynamic servers and their uses -->
+            <div class="q-block" style="margin-bottom: 0;">
+                <span class="q-num">Question 4 &mdash; Multiple Choice</span>
+                <p class="q-text">Which of the following websites is the best example of a dynamic web server?</p>
+                <label><input type="radio" name="q4" value="a"> A government info page with contact details</label>
+                <label><input type="radio" name="q4" value="b"> A restaurant menu site</label>
+                <label><input type="radio" name="q4" value="c"> Instagram</label>
+                <label><input type="radio" name="q4" value="d"> A small business hours page</label>
+            </div>
+
         </div>
 
-        <!-- testing knowledge of when to use a static server -->
-        <div class="q-block">
-            <span class="q-num">Question 2 &mdash; Select All That Apply</span>
-            <p class="q-text">Why would you use a static web server? Select all that apply.</p>
-            <label><input type="checkbox" name="q2" value="a"> Speed</label>
-            <label><input type="checkbox" name="q2" value="b"> Requires a login system</label>
-            <label><input type="checkbox" name="q2" value="c"> Security</label>
-            <label><input type="checkbox" name="q2" value="d"> Simplicity</label>
-            <label><input type="checkbox" name="q2" value="e"> Constantly changing database</label>
-        </div>
-
-        <!-- this question is testing if you can tell the difference between attacks -->
-        <div class="q-block">
-            <span class="q-num">Question 3 &mdash; Multiple Choice</span>
-            <p class="q-text">Which SQL injection attack works by using process of elimination and looking for error messages to map out a database?</p>
-            <label><input type="radio" name="q3" value="a"> Union-Based SQLi</label>
-            <label><input type="radio" name="q3" value="b"> Error-Based SQLi</label>
-            <label><input type="radio" name="q3" value="c"> Brute Force Attack</label>
-            <label><input type="radio" name="q3" value="d"> Phishing</label>
-        </div>
-
-        <!-- testing knowledge of dynamic servers and their uses -->
-        <div class="q-block">
-            <span class="q-num">Question 4 &mdash; Multiple Choice</span>
-            <p class="q-text">Which of the following websites is the best example of a dynamic web server?</p>
-            <label><input type="radio" name="q4" value="a"> A government info page with contact details</label>
-            <label><input type="radio" name="q4" value="b"> A restaurant menu site</label>
-            <label><input type="radio" name="q4" value="c"> Instagram</label>
-            <label><input type="radio" name="q4" value="d"> A small business hours page</label>
-        </div>
-
-        <!-- testing knowledge of ARPANET -->
+        <!-- testing knowledge of ARPANET -- full width at the bottom -->
         <div class="q-block">
             <span class="q-num">Question 5 &mdash; Fill in the Blank</span>
             <p class="q-text">The precursor to the internet, built during the Cold War, was called __________.</p>
